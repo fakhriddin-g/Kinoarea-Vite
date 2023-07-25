@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/public/icons/logo.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/style/style.scss" />
+    <link rel="stylesheet" href="/style/swiper.scss" />
+    <title>Kinoarea</title>
+  </head>
+  <body>
+    <div class="main-screen">
+      <header>
+        <div class="container"></div>
+      </header>
+
+      <!-- Top Row -->
+      <div class="container">
+        <div class="top-row">
+          <h2>Сейчас в кино</h2>
+          <span class="top-row__line"></span>
+          <div class="top-row__nav">
+            <ul class="top-row__list">
+              <li class="top-row__item active">Все</li>
+              <li class="top-row__item">Боевики</li>
+              <li class="top-row__item">Приключения</li>
+              <li class="top-row__item">Комедии</li>
+              <li class="top-row__item">Фантастика</li>
+              <li class="top-row__item">Триллеры</li>
+              <li class="top-row__item">Драма</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Top New Films -->
+      <div class="container">
+        <div class="new-film"></div>
+
+        <div class="new-film__btn">
+          <button>Все навинки</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Trailer -->
+    <sector class="trailer">
+      <div class="container">
+        <div class="trailer__row">
+          <h3>Новые трейлеры</h3>
+          <div class="trailer__row-all-trailer">
+            <h5>Все трейлеры</h5>
+            <img src="/public/icons/arrow-right.svg" alt="" />
+          </div>
+        </div>
+
+        <div class="trailer__video">
+          <img class="trailer__video-img" src="/public/images/trailer1.png" alt="" />
+          <div class="trailer__video-desc">
+            <h3>Форсаж 9</h3>
+            <img class="desc-img" src="/public/images/social-net.png" alt="" />
+            <div class="trailer__video-desc-rait">
+              <div class="rait">
+                <img src="/public/icons/like.svg" alt="" />
+                <span>420</span>
+              </div>
+              <div class="rait">
+                <img src="/public/icons/dislike.svg" alt="" />
+                <span>420</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="trailer__other-trailer"></div>
+      </div>
+    </sector>
+
+    <!-- Popular Film -->
+    <section class="popular-film">
+      <div class="container">
+        <div class="popular-film__row row">
+          <h3>Популярные фильмы</h3>
+          <span></span>
+          <div class="popular-film__row-nav">
+            <ul class="popular-film__row-list">
+              <li class="popular-film__row-item">Всё время</li>
+              <li class="popular-film__row-item">2020</li>
+              <li class="popular-film__row-item active">2019</li>
+              <li class="popular-film__row-item">2018</li>
+              <li class="popular-film__row-item">2017</li>
+              <li class="popular-film__row-item">2016</li>
+              <li class="popular-film__row-item">2015</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="popular-film__slider">
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">Slide 1</div>
+              <div class="swiper-slide">Slide 2</div>
+              <div class="swiper-slide">Slide 3</div>
+              <div class="swiper-slide">Slide 4</div>
+              <div class="swiper-slide">Slide 5</div>
+              <div class="swiper-slide">Slide 6</div>
+              <div class="swiper-slide">Slide 7</div>
+              <div class="swiper-slide">Slide 8</div>
+              <div class="swiper-slide">Slide 9</div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Popular Acter -->
+    <section class="popular-acter">
+      <div class="container">
+        <div class="popular-acter__row">
+          <h3>Популярные персоны</h3>
+          <span></span>
+          <div class="popular-acter__row-nav">
+            <ul class="popular-acter__row-list">
+              <li class="popular-acter__row-item">За год</li>
+              <li class="popular-acter__row-item">За месяц</li>
+              <li class="popular-acter__row-item active">За неделю</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="popular-acter__place">
+          <div class="box"></div>
+          
+          <div class="popular-acter__other-place"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Latest News -->
+    <section class="latest-news">
+      <div class="container">
+        <div class="latest-news__row">
+          <h3>Новые трейлеры</h3>
+          <div class="latest-news__row-all-news">
+            <h5>Все новости</h5>
+            <img src="/public/icons/arrow-right.svg" alt="" />
+          </div>
+        </div>
+
+        <div class="latest-news__news">
+          <div class="latest-news__news-item">
+            <img src="/public/images/news1.png" alt="" />
+          </div>
+          <div class="latest-news__news-asside">
+            <div class="latest-news__news-asside-item">
+              <img src="/public/images/news2.png" alt="" />
+            </div>
+            <div class="latest-news__news-asside-item">
+              <img src="/public/images/news2.png" alt="" />
+            </div>
+            <div class="latest-news__news-asside-item">
+              <img src="/public/images/news2.png" alt="" />
+            </div>
+            <div class="latest-news__news-asside-item">
+              <img src="/public/images/news2.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script type="module" src="/modules/swiper.js"></script>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
