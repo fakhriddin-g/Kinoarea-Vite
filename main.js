@@ -1,9 +1,9 @@
 import axios from "axios"
 import { headerFunction } from "./modules/header"
 import { newFilmFunction, otherPopularActerFunction, popularActerFunction, trailerFunction } from "./modules/interface"
+import { useHttp } from "./modules/http.request"
 
 // Get variables
-let header = document.querySelector('header .container')
 let newFilm = document.querySelector('.new-film')
 let otherTrailer = document.querySelector('.trailer__other-trailer')
 let popularActer = document.querySelector('.popular-acter__place .box')
@@ -14,7 +14,7 @@ let arr = [1,2,3,4]
 let arrr = [1,2,3,4]
 
 // Call Functions
-headerFunction(header)
+headerFunction()
 
 axios.get(import.meta.env.VITE_PLAYINGNOW_URL, {
   headers: {

@@ -1,5 +1,7 @@
-export function headerFunction(place) {
-  place.innerHTML += `
+let header = document.querySelector('header .container')
+
+export function headerFunction() {
+  header.innerHTML += `
     <div class="header">
       <div class="header__logo">
         <img src="/public/images/logo.png" alt="" />

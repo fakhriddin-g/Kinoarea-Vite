@@ -1,15 +1,32 @@
+
+
 export function newFilmFunction(arr, place) {
   for (const film of arr) {
-    place.innerHTML += `
-      <div class="new-film__item">
-        <div class="new-film__item-img">
-          <img src="${import.meta.env.VITE_BASE_IMG + film.poster_path}" alt="" />
-        </div>
-        <div class="new-film__item-name">${film.original_title}</div>
-        <div class="new-film__item-genre">Триллер</div>
-        <span class="rating">${film.vote_average}</span>
-      </div>
-    `
+    let filmBox = document.createElement('div')
+    let filmImg = document.createElement('div')
+    let img = document.createElement('img')
+    let filmName = document.createElement('div')
+    let filmGenre = document.createElement('div')
+    let filmRating = document.createElement('div')
+
+    filmBox.classList.add('new-film__item')
+    filmImg.classList.add('new-film__item-img')
+    filmName.classList.add('new-film__item-name')
+    filmGenre.classList.add('new-film__item-genre')
+    filmRating.classList.add('rating')
+
+    filmName.innerHTML = film.original_title
+    filmGenre.innerHTML = 'Трилер'
+    filmRating.innerHTML = film.vote_average
+    img.src = import.meta.env.VITE_BASE_IMG + film.poster_path
+
+    filmImg.append(img)
+    filmBox.append(filmImg, filmName, filmGenre, filmRating)
+    place.append(filmBox)
+
+    filmBox.onclick = () => {
+      location.assign('/pages/film-card/?id=' + film.id)
+    }
   }
 }
 
@@ -25,8 +42,8 @@ export function trailerFunction(arr, place) {
 }
 
 export function popularActerFunction(arr, place) {
-for (const acter of arr) {
-  place.innerHTML += `
+  for (const acter of arr) {
+    place.innerHTML += `
 
     <div class="popular-acter__place-item">
       <img src="${import.meta.env.VITE_BASE_IMG + acter.profile_path}" alt="" />
@@ -39,11 +56,10 @@ for (const acter of arr) {
     </div>
 
   `
-}
+  }
 }
 
 export function otherPopularActerFunction(arr, place) {
-  console.log(arr);
   for (const acter of arr) {
     place.innerHTML += `
     

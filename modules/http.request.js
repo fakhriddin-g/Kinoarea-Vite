@@ -1,14 +1,10 @@
 import axios from "axios"
 
-const popularURL = "https://api.themoviedb.org/3/movie/popular"
-const playingNowURL = "https://api.themoviedb.org/3/movie/now_playing"
-const genreURL = "https://api.themoviedb.org/3/genre/movie/list"
+// const popularURL = "https://api.themoviedb.org/3/movie/popular"
+// const playingNowURL = "https://api.themoviedb.org/3/movie/now_playing"
+// const genreURL = "https://api.themoviedb.org/3/genre/movie/list"
 
-axios.get(baseURL, {
-  headers: {
-    Authorization: 'Bearer' + import.meta.env.VITE_API_KEY
-  }
-})
+const baseURL = import.meta.env.VITE_BASE_URL
 
 
 const enums = {
@@ -26,10 +22,15 @@ export const useHttp = () => {
     }
 
     try {
-      const res = await axios[method](baseURL + url, body)
+      const res = await axios[method](baseURL + url, body, {
+        headers: {
+          Accept: 'application/json',
+          Authorization: `Bearer ${import.meta.env.VITE_API_KEY}`
+        }
+      })
 
       if (res.status === 200 || res.status === 201) {
-        return res.data
+        return res
       }
     } catch (error) {
       return error
