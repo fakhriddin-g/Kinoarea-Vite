@@ -23,16 +23,7 @@ body {
 
   height: 100%;
 
-  &::after {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 400px;
-    position: absolute;
-    bottom: 0px;
-    z-index: -1;
-    background: linear-gradient(transparent, #1e2538);
-  }
+  
 
   &::before {
     content: "";
@@ -78,26 +69,28 @@ button {
 
 // Movie Card
 .movie-card {
+  display: block;
   width: 100%;
-  height: calc(100vh - 10.2rem);
-
+  position: relative;
+  
   .container {
     width: 75%;
     max-width: 117.4rem;
   }
-
+  
   &__img {
     width: 100%;
     max-width: 34rem;
     height: 46.3rem;
-
+    
     img {
       width: 100%;
       height: 100%;
     }
   }
-
+  
   &__top {
+    height: calc(100vh - 10.2rem);
     display: flex;
     gap: 5rem;
 
@@ -162,6 +155,18 @@ button {
         padding: 2.1rem 3.6rem;
         border: 0.2rem solid #fff;
       }
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 400px;
+      position: absolute;
+      bottom: 40rem;
+      left: 0;
+      z-index: -1;
+      background: linear-gradient(transparent, #1e2538);
     }
   }
 
@@ -242,6 +247,60 @@ button {
           }
         }
       }
+    }
+  }
+}
+
+
+// All Acter
+.acter {
+  display: block;
+  margin-top: 5rem;
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-all-acter {
+      display: flex;
+      align-self: center;
+      gap: 1rem;
+    }
+  }
+
+  &__main-acter {
+    margin-top: 6rem;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 5rem;
+
+    &-item {
+      display: flex;
+      flex-direction: column;
+      gap: 0.9rem;
+
+      img {
+        width: 100%;
+      }
+
+      .name-eng {
+        opacity: 75%;
+      }
+
+      .name-in-film {
+        color: #F2F60F;
+      }
+    }
+  }
+
+  &__film-trailer {
+    margin-top: 5rem;
+
+    embed {
+      width: 100%;
+      height: 70rem;
+      object-fit: contain;
     }
   }
 }

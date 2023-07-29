@@ -78,7 +78,6 @@ export function otherPopularActerFunction(arr, place) {
 
 export function movieCardFunction(arr, place) {
 
-  console.log(arr);
   let body = document.body
   body.style.backgroundImage = `url('${import.meta.env.VITE_BASE_IMG + arr.backdrop_path}')`
   body.backgroundSize = 'cover'
@@ -203,4 +202,23 @@ export function movieCardFunction(arr, place) {
     </div>
   
   `
+}
+
+export function acterFunction(arr, place) {
+  console.log(arr);
+  
+  for (const movieActer of arr) {
+    
+    place.innerHTML += `
+  
+    <div class="acter__main-acter-item">
+      <img src="${import.meta.env.VITE_BASE_IMG + movieActer.profile_path}" alt="">
+      <div class="name-ru">${movieActer.original_name}</div>
+      <div class="name-eng">${movieActer.name}</div>
+      <div class="name-in-film">${movieActer.character}</div>
+    </div>  
+    
+    `
+
+  }
 }
