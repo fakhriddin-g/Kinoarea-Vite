@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/7010bc15cd.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="/style/style.scss">
   <link rel="stylesheet" href="/style/profile.scss">
   <title>Profile</title>
@@ -15,22 +16,105 @@
   <div class="container">
     <div class="layout">
       <aside>
-        <img class="active" src="/public/icons/home.svg" alt="">
-        <img src="/public/icons/friends.svg" alt="">
-        <img src="/public/icons/messages.svg" alt="">
-        <img src="/public/icons/like-dislike.svg" alt="">
-        <img src="/public/icons/comment.svg" alt="">
-        <img src="/public/icons/films.svg" alt="">
-        <img src="/public/icons/famous.svg" alt="">
+        <img id="home" class="active_link" src="/public/icons/home-icon.svg" alt="">
+        <img id="friend" src="/public/icons/friends.svg" alt="">
+        <img id="message" src="/public/icons/messages.svg" alt="">
+        <img id="review" src="/public/icons/like-dislike.svg" alt="">
+        <img id="comment" src="/public/icons/comments.svg" alt="">
+        <img id="film" src="/public/icons/films.svg" alt="">
+        <img id="famous" src="/public/icons/famous-icon.svg" alt="">
       </aside>
       <main>
-        <div class="wrapper" id="home">1</div>
-        <div class="wrapper" id="friend">2</div>
-        <div class="wrapper" id="message">3</div>
-        <div class="wrapper" id="review">4</div>
-        <div class="wrapper" id="comment">5</div>
-        <div class="wrapper" id="film">6</div>
-        <div class="wrapper" id="famous">7</div>
+        <div class="wrapper" id="cont-home">
+          <div class="home-row">
+            <h3>Ваш профиль</h3>
+            <button>
+              <img src="/public/icons/setting.svg" alt="">
+              <p>Настройки</p>
+            </button>
+          </div>
+
+          <div class="home__profile-info">
+            <img src="/public/images/cover.png" alt="">
+            <div class="personal-info">
+              <h2>Mirakov Fakhriddin</h2>
+              <div class="social-media__icons">
+                <ul>
+                  <li><a href="/"><i class="fa fa-vk" aria-hidden="true"></i></a></li>
+                  <li><a href="/"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+                  <li><a href="/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                  <li><a href="/"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                  <li><a href="/"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                </ul>
+              </div>
+              <p>Учитывая ключевые сценарии поведения, базовый вектор развития, а также свежий взгляд на привычные вещи - безусловно открывает новые горизонты для поставленных обществом задач.</p>
+              <table>
+                <tbody>
+                  <tr>
+                      <td>Пол:</td>
+                      <td class="color-column">Мужской</td>
+                  </tr>
+                  <tr>
+                      <td>День рождения:</td>
+                      <td class="color-column">14 дек 1998г. (25 лет)</td>
+                  </tr>
+                  <tr>
+                      <td>Страна:</td>
+                      <td class="color-column">Таджикистан</td>
+                  </tr>
+                  <tr>
+                      <td>Город:</td>
+                      <td class="color-column">Хорог</td>
+                  </tr>
+                  <tr>
+                      <td>Любимые жанры:</td>
+                      <td class="color-column">Боевик</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="person__favourate-thing">
+            <ul>
+              <li>
+                <span>25</span>
+                Фильмы
+              </li>
+              <li>
+                <span>15</span>
+                Друзья
+              </li>
+              <li>
+                <span>2</span>
+                Любимые фильмы
+              </li>
+              <li>
+                <span>5</span>
+                Избранное
+              </li>
+              <li>
+                <span>22</span>
+                Рецензии
+              </li>
+              <li>
+                <span>13</span>
+                Камментарии
+              </li>
+              <li>
+                <span>16</span>
+                Ожидаемые фильмы
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="wrapper" id="cont-friend">2</div>
+        <div class="wrapper" id="cont-message">3</div>
+        <div class="wrapper" id="cont-review">4</div>
+        <div class="wrapper" id="cont-comment">5</div>
+        <div class="wrapper" id="cont-film">6</div>
+        <div class="wrapper" id="cont-famous">7</div>
       </main>
     </div>
   </div>
