@@ -3,10 +3,12 @@ let header = document.querySelector('header .container')
 export function headerFunction() {
   header.innerHTML += `
     <div class="header">
-      <div class="header__logo">
-        <img src="/public/images/logo.png" alt="" />
-        <img class="header__logo-social" src="/public/images/social-net.png" alt="" />
-      </div>
+      <a href="/">
+        <div class="header__logo">
+          <img src="/public/images/logo.png" alt="" />
+          <img class="header__logo-social" src="/public/images/social-net.png" alt="" />
+        </div>
+      </a>
 
       <nav class="header__nav">
         <ul class="header__nav-list">
@@ -24,7 +26,9 @@ export function headerFunction() {
         <div class="header__btn-search">
           <img src="/public/icons/search.svg" alt="" />
         </div>
-        <button class="header__btn-button">Войти</button>
+        <a href="/pages/profile/">
+          <button class="header__btn-button">Войти</button>
+        </a>
       </div>
     </div>
   `

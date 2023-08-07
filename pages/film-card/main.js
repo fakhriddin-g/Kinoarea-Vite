@@ -10,6 +10,7 @@ headerFunction()
 
 let movie_id = location.search.split("=").at(-1)
 
+// Get Request
 axios.get(`https://api.themoviedb.org/3/movie/${movie_id}`, {
   headers: {
     Authorization: `Bearer ${import.meta.env.VITE_API_KEY}`,
