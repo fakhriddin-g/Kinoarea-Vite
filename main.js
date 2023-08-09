@@ -21,7 +21,7 @@ axios.get(import.meta.env.VITE_PLAYINGNOW_URL, {
     Authorization: `Bearer ${import.meta.env.VITE_API_KEY}`,
     Accept: 'application/json'
   }
-}).then(res => newFilmFunction(res.data.results.splice(0, 4), newFilm))
+}).then(res => newFilmFunction(res.data.results.splice(0, 5), newFilm))
 
 trailerFunction(arr, otherTrailer)
 
